@@ -1,0 +1,4 @@
+INFO         | Android emulator version 35.3.11.0 (build_id 12836668) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+ERROR        | No AVD specified. Use '@foo' or '-avd foo' to launch a virtual device named 'foo'
+

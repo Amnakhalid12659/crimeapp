@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+
+    {
+      "type": "android",
+      "request": "launch",
+      "name": "Android Launch",
+      "appSrcRoot": "${workspaceRoot}/app/src/main",
+      "apkFile": "${workspaceRoot}/app/build/outputs/apk/debug/app-debug.apk",
+      "adbPort": 5037
+    },
+
+
+
+
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/MOD/Desktop/flutter project/project/assets/images",
+      "program": "c:/Users/MOD/Desktop/flutter project/project/assets/images/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

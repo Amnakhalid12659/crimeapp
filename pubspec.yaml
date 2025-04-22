@@ -41,6 +41,8 @@ dependencies:
   get: ^4.7.2
   smooth_page_indicator: ^1.2.1
   google_fonts: ^6.2.1
+  dependencies:
+  lottie: ^3.3.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

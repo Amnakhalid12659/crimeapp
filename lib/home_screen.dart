@@ -11,8 +11,7 @@ import 'package:project/utils/helpers/helperfunctions.dart';
 import 'package:get/get.dart';
 
 class Homescreen extends StatelessWidget {
-  Homescreen({super.key});
-  final user = FirebaseAuth.instance.currentUser;
+  const Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,7 @@ class Homescreen extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '${user!.email}',
+                                "email",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24,

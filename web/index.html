@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Crime Analytics</title>
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+  
+  <!-- Initialize Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCfgqyR8kmjgrQil5YXH8OgruCf35HaYe8",
+            authDomain: "crime-analytics-a322e.firebaseapp.com",
+            projectId: "crime-analytics-a322e",
+            storageBucket: "crime-analytics-a322e.appspot.com",
+            messagingSenderId: "958180995213",
+            appId: "1:958180995213:web:1e29eb1680dc2b5380f2c4",
+    };
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="project">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>project</title>
-  <link rel="manifest" href="manifest.json">
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <!-- Other scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  
+  <!-- Loading indicator -->
+  <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: white; z-index: 9999;">
+    <div style="text-align: center;">
+      <img src="assets/app_logo.png" alt="Loading..." style="width: 150px; height: 150px;">
+      <p>Loading Crime Analytics App...</p>
+    </div>
+  </div>
+  
+  <script>
+    // Hide loading indicator when Flutter app is ready
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+      }, 3000);
+    });
+  </script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "958180995213",
-    "project_id": "crime-analytics-a322e",
-    "storage_bucket": "crime-analytics-a322e.firebasestorage.app"
+    "project_number": "534959006295",
+    "project_id": "my-crime-analysis-ab168",
+    "storage_bucket": "my-crime-analysis-ab168.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:958180995213:android:fb6283438fafbb3f80f2c4",
+        "mobilesdk_app_id": "1:534959006295:android:d685db43f0f30987ed3912",
         "android_client_info": {
           "package_name": "com.example.project"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA_4iM2PsIN81QFUifFmf6GJwauD9tFxio"
+          "current_key": "AIzaSyABgODWvYKNWiRN79iiMU-a1ixobwfu0WA"
         }
       ],
       "services": {

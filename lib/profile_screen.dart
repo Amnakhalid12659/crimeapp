@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project/auth_service.dart';
 import 'package:project/emergencyycontacts_screen.dart';
 import 'package:project/feedback_screen.dart';
 import 'package:project/login_screen.dart';
@@ -8,7 +9,8 @@ import 'package:project/utils/constants/colors.dart';
 import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+  ProfileScreen({super.key});
+  final _auth = AuthServices();
 
   @override
   Widget build(BuildContext context) {
@@ -197,9 +199,11 @@ class ProfileScreen extends StatelessWidget {
             ),
           ),
           TextButton(
-            onPressed: () => Get.offAll(() => Loginscreen()),
+            onPressed: () async {
+              await _auth.signout();
+            },
             child: const Text(
-              "Log Out",
+              "Yes",
               style: TextStyle(fontSize: 10, color: Colors.black),
             ),
           ),

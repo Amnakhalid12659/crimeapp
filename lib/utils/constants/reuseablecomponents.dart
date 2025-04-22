@@ -7,6 +7,7 @@ class Componentsbuild {
     required String hintText,
     required IconData icon,
     required VoidCallback onIconPressed,
+    required TextEditingController controller,
   }) {
     return Container(
       padding: const EdgeInsets.only(left: 20, right: 20),
@@ -49,12 +50,14 @@ class Componentsbuild {
     required String hintText,
     required bool isVisible,
     required VoidCallback onToggleVisibility,
+    required TextEditingController controller,
   }) {
     return Container(
       padding: const EdgeInsets.only(left: 20, right: 20),
       margin: EdgeInsets.only(top: 12, bottom: 12),
       width: double.infinity,
       child: TextField(
+        controller: controller,
         obscureText: !isVisible,
         style: TextStyle(color: Color(0xFF1B3051)),
         decoration: InputDecoration(
